@@ -1,5 +1,63 @@
-//============ NyanBot ============\\
-// + Favor de mantener este codigo
+//======//============ Chikiss-Bot ============\\
+// + Fa///============ Freddy ==================\\
+const { 
+  WAConnection,
+  MessageType,
+  Presence, 
+  MessageOptions,
+  Mimetype,
+  WALocationMessage,
+  WA_MESSAGE_STUB_TYPES,
+  ReconnectMode,
+  ProxyAgent,
+  GroupSettingChange,
+  ChatModification,
+  waChatKey,
+  WA_DEFAULT_EPHEMERAL,
+  mentionedJid,
+  prepareMessageFromContent, 
+  Browsers,
+  processTime
+} = require("@adiwajshing/baileys")
+const moment = require("moment-timezone");
+const os = require("os");
+const imageToBase64 = require('image-to-base64');
+const speed = require('performance-now');
+const chalk = require('chalk');
+const crypto = require("crypto-js");
+const CryptoJS = require("crypto-js");
+const fs = require('fs');
+const { wait, h2k, generateMessageID, getGroupAdmins, banner, start, info, success, close } = require('./lib/functions')
+const { addBanned, unBanned, BannedExpired, cekBannedUser } = require('./lib/banned.js')
+const { getLevelingXp, getLevelingId, addLevelingXp, addLevelingLevel, addLevelingId, getLevelingLevel, getUserRank, addCooldown, leveltab } = require('./lib/leveling.js')
+const { removeBackgroundFromImageFile } = require('remove.bg');
+const { exec } = require('child_process');
+const ffmpeg = require('fluent-ffmpeg');
+const axios = require('axios');
+const fetch = require('node-fetch');
+const request = require('request');
+const fromBuffer = require('file-type');
+const FormData = require('form-data')
+const samuGg = require('google-it');
+const samuGgImg = require('g-i-s');
+const hx = require('hxz-api');
+////////////▶ 𝐒𝐚𝐦𝐮𝟑𝟑𝟎 | 𝐒𝐚𝐦 𝐲 𝐏𝐞𝐫𝐫𝐲
+const { validmove, setGame } = require("./lib/tictactoe");
+const simple = require('./lib/simple.js');
+const {y2mateA, y2mateV} = require('./lib/y2mate.js')
+const {sm330mfire} = require('./lib/mediafire.js')
+const { ssstik } = require("./lib/tiktok.js")
+const {fbDown} = require('./lib/fb.js')
+const { isFiltered, addFilter } = require('./lib/antispam')
+const chatban = JSON.parse(fs.readFileSync('./src/ban.json'))
+const ban = JSON.parse(fs.readFileSync('./src/banned.json'))
+const crypt = fs.readFileSync('./crypt/imp.json')
+const zalgo = require('./lib/zalgo')
+const {convertSticker} = require("./lib/swm.js")
+const { samuBug } = require('./crypt/samuBug')
+const conn = require("./lib/connect")
+const msg = require("./lib/message")
+const wa = require(".de mantener este codigo
 //   tal y como esta.
 // + Si modificaras, manten los
 //   creditos:
@@ -63,6 +121,10 @@ const { samuBug } = require('./crypt/samuBug')
 const conn = require("./lib/connect")
 const msg = require("./lib/message")
 const wa = require("./lib/wa")
+const Exif = require('./lib/exif');
+const exif = new Exif();
+const { recognize } = require('./lib/ocr');
+const help = require("./lib//lib/wa")
 const Exif = require('./lib/exif');
 const exif = new Exif();
 const { recognize } = require('./lib/ocr');
@@ -252,7 +314,7 @@ message: {
 "mimetype": "image/jpeg",             
 "jpegThumbnail": fs.readFileSync(`./src/fake.jpg`)           
 },                                
-"title": `Bienvenido a ${mdata.subject}`,
+"title": `Bienvenido A ZonaFree SOPORTE 2.0 ${mdata.subject}`,
 "description": "",                
 "currencyCode": "SYP",                  
 "priceAmount1000": "999999999999999999",
@@ -260,7 +322,7 @@ message: {
 "productImageCount": 999
 },                          
 "businessOwnerJid": `0@s.whatsapp.net`
-}}}, caption: `😙Hola, @${num.split('@')[0]}, _*Bienvenido a ${mdata.subject}, esperamos que te la pases a gusto en este grupo✨*_\n\n_Recuerda siempre seguir las reglas y mantener una formalidad respetuosa_😉\n\nSon las *${jm}* del *${calender}*\n\n${mdata.desc}`, contextInfo: { mentionedJid: [num] }})
+}}}, caption: `😙Hola, @${num.split('@')[0]}, _*Bienvenido A ZonaFree SOPORTE 2.0 ${mdata.subject}, esperamos que te la pases a gusto en este grupo✨*_\n\n_Recuerda siempre seguir las reglas y mantener una formalidad respetuosa_😉\n\nSon las *${jm}* del *${calender}*\n\n${mdata.desc}`, contextInfo: { mentionedJid: [num] }})
 } catch {
 samu330.sendMessage(mdata.id, `😙Hola, @${num.split('@')[0]}, _*Bienvenido a ${mdata.subject}, esperamos que te la pases a gusto en este grupo✨*_\n\n_Recuerda siempre seguir las reglas y mantener una formalidad respetuosa_😉\n\nSon las *${jm}* del *${calender}*\n\n${mdata.desc}`, MessageType.text)
 }
@@ -299,7 +361,7 @@ samu330.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextIn
 console.log('Error : %s', color(e, 'red'))
 }
 })
-////////////▶ 𝐒𝐚𝐦𝐮𝟑𝟑𝟎 | 𝐒𝐚𝐦 𝐲 𝐏𝐞𝐫𝐫𝐲
+////////////▶ FREDDY | FREDDY
 samu330.on('chat-update', async(sam) => {
     try {
         if (!sam.hasNewMessage) return
@@ -1185,9 +1247,9 @@ ${bodyM} ${prefix}leerimagen
  ********************************`
  const Menu7 = `➫ြ𝚜ᷤ𝚊ͣ𝚖ͫ𝚞𝉄𖾔𖾔𖽙.li Oℱịcιɑl.li                                                                            
 
- Si quieres contribuir para que todos estos comandos y mas funcionen ala perfeccion, puedes aportar un granito de arena al sigiente paypal:
+ Si quieres contribuir para que todos estos comandos y mas funcionen a la perfeccion, puedes aportar un granito de arena al sigiente paypal:
  
- paypal.me/samu330
+ paypal.me/
  
  
  
